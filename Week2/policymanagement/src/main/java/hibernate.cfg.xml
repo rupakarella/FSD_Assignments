@@ -1,0 +1,25 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+ "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+ "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection properties - Driver, URL, user, password -->
+		<property name="hibernate.connection.driver_class">
+			com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">
+			jdbc:mysql://localhost:3306/policy_db</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">Rupa212*</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+		<property name="show_sql">true</property>
+		<!--Mapping entity class having annotation-->
+		<mapping class="com.hexaware.policymanagement.entity.Users"/>
+		<mapping class="com.hexaware.policymanagement.entity.Address"/>
+		<mapping class="com.hexaware.policymanagement.entity.Policy"/>
+		<mapping class="com.hexaware.policymanagement.entity.UserPolicies"/>
+		<mapping class="com.hexaware.policymanagement.entity.PolicyPayments"/>
+	</session-factory>
+</hibernate-configuration>		
