@@ -1,0 +1,23 @@
+<h1 *ngIf="true">Hello</h1>
+<h2 *ngIf="5 >3">Welcome to angular</h2>
+Enter Choice: <input type="text" [(ngModel)]="num1">
+<div [ngSwitch]="num1">
+<div *ngSwitchCase="'One'">One is selected</div>
+<div *ngSwitchCase="'Two'">Two is selected</div>
+<div *ngSwitchDefault>Default</div>
+
+Enter Tech: <input type="text" [(ngModel)]="tech">
+<div [ngSwitch]="tech">
+<div *ngSwitchCase="'Java'"><img src="../assets/java.jpg"alt="Java Logo"></div>
+<div *ngSwitchCase="'Python'"><img src="../assets/python.png"alt="Python Logo"></div>
+<div *ngSwitchDefault>This does not exists</div>
+
+</div>
+
+<div  *ngFor="let i of arr; let j=index">Welcome{{i}} index {{j}}</div>
+<h2 [ngStyle] ="{'color':textColor,'background-color':backgroundColor}">This is CSS</h2>
+</div>
+<div [ngClass]="isSpecial ? 'cls1':'cls2'">This is Special</div>
+<h1 ngNonBindable>Hello {{friends}}</h1>
+<h2 ngNonBindable>Hello</h2>
+<div class="card card-block" appCardHover>cardHover</div>

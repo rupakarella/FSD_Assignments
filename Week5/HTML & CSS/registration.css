@@ -1,0 +1,125 @@
+body {
+    font-family: "Arial";
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.container {
+    background-color: #8947f3;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.register-form {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 10 auto;
+    padding:10px;
+    border-radius: 10px;
+}
+
+.register-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register-form label {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.register-form input[type="tel"],
+.register-form input[type="date"] {
+    display: inline-block;
+    width:155px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+.register-form textarea {
+    height: 80px;
+}
+
+.register-form .gender-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+
+.register-form .gender-container label {
+    display: inline-block;
+   margin: 0px;
+}
+.register-form .radio-container input[type="radio"] {
+    margin-left: 10px;
+    margin-right: 0; /* Adjust as needed */
+    margin-bottom: 0; /* Remove default bottom margin */
+}
+.register-form button[type="submit"] {
+    width: 95%;
+    background:  #8947f3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px; 
+}
+.country-postal {
+    display: flex; /* Make the container a flexbox */
+    justify-content: space-between; /* Distribute inputs evenly */
+    align-items: center; /* Align inputs vertically */
+  }
+  
+  .country-postal input[type="text"] {
+    width: 48%; /* Set individual input width to 48% */
+    margin-right: 10px; /* Add spacing between inputs (optional) */
+  }
+  .tel-dob {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.gender_names{
+    margin: 0px;
+}
+
+.gender-text{
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.gender-options{
+    margin-left: 5px;
+}
+
+  
+

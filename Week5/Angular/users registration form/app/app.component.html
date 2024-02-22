@@ -1,0 +1,103 @@
+<div class="container">
+    <h2>User Registration Form</h2>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="col-lg-4">
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" formControlName="emailAddress" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['emailAddress'].errors }">
+        <div *ngIf="submitted && f['emailAddress'].errors" class="invalid-feedback"></div>
+        <div  style="color: red;" *ngIf="f['emailAddress'].errors?.['required']">Email Address is required</div>
+        <div *ngIf="f['emailAddress'].errors?.['email']">Invalid email address</div>
+        </div>
+      <div class="form-group">
+        <label>Contact Number</label>
+        <input type="text" formControlName="contactNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['contactNumber'].errors }">
+        <div *ngIf="submitted && f['contactNumber'].errors" class="invalid-feedback"></div>
+          <div style="color: red;" *ngIf="f['contactNumber'].errors?.['required']">Contact Number is required</div>
+          <div style="color: red;" *ngIf="f['contactNumber'].errors?.['pattern']">Contact Number must start with digits 6-9 and contain 10 digits</div>
+        </div>
+     
+      
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }">
+        <div *ngIf="submitted && f['password'].errors" class="invalid-feedback"></div>
+          <div style="color: red;" *ngIf="f['password'].errors?.['required']">Password is required</div>
+        </div>
+      
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['firstName'].errors }">
+        <div *ngIf="submitted && f['firstName'].errors" class="invalid-feedback"> </div>
+          <div *ngIf="f['firstName'].errors?.['required']">First Name is required</div>
+          <div *ngIf="f['firstName'].errors?.['pattern']">First Name can only contain alphabets and spaces</div>
+        </div>
+     
+      
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['lastName'].errors }">
+        <div *ngIf="submitted && f['lastName'].errors" class="invalid-feedback"> </div>
+          <div *ngIf="f['lastName'].errors?.['required']">Last Name is required</div>
+          <div *ngIf="f['lastName'].errors?.['pattern']">Last Name can only contain alphabets and spaces</div>
+        </div>
+     
+      
+      <div class="form-group">
+        <label>Date of Birth</label>
+        <input type="date" formControlName="dateOfBirth" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['dateOfBirth'].errors }">
+        <div *ngIf="submitted && f['dateOfBirth'].errors" class="invalid-feedback"></div>
+          <div *ngIf="f['dateOfBirth'].errors?.['required']">Date of Birth is required</div>
+          <div *ngIf="f['dateOfBirth'].errors?.['past']">Date of Birth must be in the past</div>
+        </div>
+      
+      
+      <div class="form-group">
+        <label>PAN Number</label>
+        <input type="text" formControlName="panNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['panNumber'].errors }">
+        <div *ngIf="submitted && f['panNumber'].errors" class="invalid-feedback"></div>
+          <div *ngIf="f['panNumber'].errors?.['required']">PAN Number is required</div>
+          <div *ngIf="f['panNumber'].errors?.['pattern']">Invalid PAN number format</div>
+        </div>
+      
+      
+      <div class="form-group">
+        <label>Employer Type</label>
+        <input type="text" formControlName="employerType" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['employerType'].errors }">
+        <div *ngIf="submitted && f['employerType'].errors" class="invalid-feedback"></div>
+          <div *ngIf="f['employerType'].errors?.['required']">Employer Type is required</div>
+          <div *ngIf="f['employerType'].errors?.['maxlength']">String length cannot exceed 25 characters</div>
+        </div>
+      
+      
+      <div class="form-group">
+        <label>Employer Name</label>
+        <input type="text" formControlName="employerName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['employerName'].errors }">
+        <div *ngIf="submitted && f['employerName'].errors" class="invalid-feedback"></div>
+          <div *ngIf="f['employerName'].errors?.['maxlength']">String length cannot exceed 25 characters</div>
+        </div>
+      
+      
+      <div class="form-group">
+        <label>Salary</label>
+        <input type="number" formControlName="salary" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['salary'].errors }">
+        <div *ngIf="submitted && f['salary'].errors" class="invalid-feedback"></div>
+          <div *ngIf="f['salary'].errors?.['min']">Salary must be a positive number</div>
+        </div>
+      
+      
+      <div class="form-group">
+        <label>User Type</label>
+        <select formControlName="userType" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['userType'].errors }">
+          <option value="">Select User Type</option>
+          <option value="Admin">Admin</option>
+          <option value="User">User</option>
+        </select>
+        <div *ngIf="submitted && f['userType'].errors" class="invalid-feedback"></div>
+          <div *ngIf="f['userType'].errors?.['required']">User Type is required</div>
+          <div *ngIf="f['userType'].errors?.['pattern']">User Type should be either 'Admin' or 'User'</div>
+        </div>
+    
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+      

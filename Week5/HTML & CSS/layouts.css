@@ -1,0 +1,51 @@
+/* styles.css */
+
+/* Styles for the layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #383737;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #90918b;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+article {
+    background-color: #cde0d7;
+    padding: 10px;
+    margin-bottom: 20px;
+    flex-basis: 70%;
+}
+
+aside {
+    background-color: #b9b9c9;
+    padding: 10px;
+    margin-left: 20px;
+    flex-basis: 25%;
+}
+
+footer {
+    background-color: #0f0f0f;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}

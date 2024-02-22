@@ -1,0 +1,8 @@
+<h1>Routing Component App Component</h1>
+<a routerLink="/home" >Home</a><br>
+<button type="submit" routerLink="/contactus/{{username}}" >Call Us</button>
+
+<ul>
+    <li><a routerLink="/aboutus" [queryParams]='addressJson'>About us</a></li>
+</ul>
+<router-outlet></router-outlet>
