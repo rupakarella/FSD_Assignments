@@ -1,0 +1,27 @@
+<button class="sort-button" (click)="getAllPlayersSortedByMatchesAsc()">Sort by Matches (Asc)</button>
+<table class="table  table-striped">
+    <thead>
+        <tr>
+            <th>Player Id</th>
+            <th>Player Name</th>
+            <th>Jersey Number</th>
+            <th>Role</th>
+            <th>Total Matches</th>
+            <th>Team Name</th>
+            <th>Country</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let player of players">
+            <td>{{ player.playerId }}</td>
+            <td>{{ player.playerName }}</td>
+            <td>{{ player.jerseyNumber }}</td>
+            <td>{{ player.role }}</td>
+            <td>{{ player.totalMatches }}</td>
+            <td>{{ player.teamName }}</td>
+            <td>{{ player.countryName }}</td>
+            <td>{{ player.description }}</td>
+        </tr>
+    </tbody>
+</table>
